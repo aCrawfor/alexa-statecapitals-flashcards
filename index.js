@@ -514,7 +514,7 @@ function handleAnswerRequest(intent, session, callback) {
 
         var speechOutputAnalysis = "";
 
-        if (answerSlotValid && intent.slots.Answer.toUpperCase == correctAnswerText.toUpperCase) {
+        if (answerSlotValid && intent.slots.Answer.value.toUpperCase() === correctAnswerText.toUpperCase()){
             currentScore++;
             speechOutputAnalysis = "correct. ";
         } else {
